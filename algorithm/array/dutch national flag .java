@@ -1,3 +1,5 @@
+//sort 0,1,2 in a array
+    
 class Solution {
     public void sortColors(int[] nums) {
         int mid=0,low=0,high=nums.length-1;
