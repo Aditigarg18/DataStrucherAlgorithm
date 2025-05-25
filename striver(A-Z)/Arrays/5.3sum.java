@@ -15,6 +15,27 @@
 // nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
 // The distinct triplets are [-1,0,1] and [-1,-1,2].
 // Notice that the order of the output and the order of the triplets does not matter.
+//BETTER-HASHING 
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        Set<List<Integer>>st=new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            Set<Integer>set=new HashSet<>();
+            for(int j=i+1;j<nums.length;j++){
+                int third=-(nums[i]+nums[j]);
+                if(set.contains(third)){
+                    List<Integer>temp=Arrays.asList(nums[i],nums[j],third);
+                    temp.sort(null);
+                    st.add(temp);
+                }
+                set.add(nums[j]);
+            }
+        }
+                List<List<Integer>>ans=new ArrayList<>(st);
+                return ans;
+    }
+}
+//OPTIMAL
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
          List<List<Integer>>ans=new ArrayList<>();
