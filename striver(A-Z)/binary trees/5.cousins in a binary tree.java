@@ -1,4 +1,4 @@
-
+// leetcode 993
 class Solution {
     public boolean isCousins(TreeNode root, int x, int y) {
     if (root == null) return false;
