@@ -1,3 +1,4 @@
+//leetcode 34
 class Solution {
     public String countAndSay(int n) {
         if(n==1){
